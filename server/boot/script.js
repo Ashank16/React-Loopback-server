@@ -17,11 +17,11 @@ module.exports = function(app) {
 
                 RoleMapping.destroyAll();
 
-                Role.findOne({name: 'admin'}, (err, role) => {
+                Role.findOne({name: 'Admin'}, (err, role) => {
                     if (err) throw(err);
                     
                     if (!role) {
-                        Role.create({ name: 'admin' }, (err, role) => {
+                        Role.create({ name: 'Admin' }, (err, role) => {
                             if (err) throw(err);
                             console.log("New Role: ", role);
             
